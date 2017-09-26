@@ -19,5 +19,6 @@ ssh ${1} ${RHOMEDIR}${SCRIPT} &>/dev/null
 #sshh() {
 #> cd /home/steven.marcus/zzwork/setup_bash_profile/
 #> ./setup_bash.sh $1
+#> ssh $1
 #> }
 #
