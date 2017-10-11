@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LHOMEDIR="/home/steven.marcus/zzwork/setup_bash_profile/"
+LHOMEDIR="/Users/steven.marcus/zzwork/setup_bash_profile/"
 RHOMEDIR="/home/steven.marcus/"
 FILE=".bash_profile"
 SCRIPT="change_my_environment.sh"
