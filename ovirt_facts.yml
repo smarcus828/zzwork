@@ -1,0 +1,17 @@
+---
+- hosts: smarcus-dev
+  become: yes
+  become_method: sudo
+
+  tasks:
+    - ovirt_auth:
+        url: "https://virtman1.ncdc.noaa.gov"
+        username: "steven.marcus"
+        password: "chicken"
+        insecure: true
+
+    - ovirt_vms_facts:
+#        pattern: name=centos* and cluster=west
+        pattern: "*"
+    - debug:
+        var: ovirt_vms

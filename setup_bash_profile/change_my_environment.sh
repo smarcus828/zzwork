@@ -8,6 +8,7 @@ then
 else
   echo "### smarcus additions ###" >> ${HOMEDIR}${FILE}
   echo "cat /etc/redhat-release" >> ${HOMEDIR}${FILE}
+  echo "date" >> ${HOMEDIR}${FILE}
 fi
 
 rm -f $0
