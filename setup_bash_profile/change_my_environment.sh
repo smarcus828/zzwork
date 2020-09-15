@@ -3,7 +3,7 @@ HOMEDIR="/home/smarcus"
 #FILE=".bash_profile"
 TMPDIR="/tmp/old_config_files"
 
-mv .bash_profile {TMPDIR}
+mv .bash_profile ${TMPDIR}
 
 git clone https://github.com/smarcus828/dotfiles.git ${HOMEDIR}/.dotfiles
 
