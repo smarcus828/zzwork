@@ -1,9 +1,9 @@
 #!/bin/bash
 
-LHOMEDIR="/Users/steven.marcus/zzwork/setup_bash_profile/"
-RHOMEDIR="/home/steven.marcus/"
-FILE=".bash_profile"
-SCRIPT="change_my_environment.sh"
+LHOMEDIR="/home/smarcus/zzwork/setup_bash_profile/"
+RHOMEDIR="/home/smarcus/"
+SCRIPT1="change_my_environment.sh"
+SCRIPT2=".bash_profile"
 
 if [[ $# -eq 0 ]]; then
   echo "Yeah - this script needs an argument.  A hostname or IP or something."
@@ -12,7 +12,7 @@ if [[ $# -eq 0 ]]; then
   exit 0 
 fi
 
-scp ${LHOMEDIR}${SCRIPT} ${1}: &>/dev/null
+scp ${LHOMEDIR}${SCRIPT1} ${LHOMEDIR}${SCRIPT2} ${1}: &>/dev/null
 ssh ${1} ${RHOMEDIR}${SCRIPT} &>/dev/null
 
 #create a function at the command line - because an alias wont take an argument
