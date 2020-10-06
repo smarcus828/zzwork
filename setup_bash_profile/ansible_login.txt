@@ -1,0 +1,3 @@
+ssha() {
+ssh -i ~/.ssh/ansible.key ansible@$1
+}
