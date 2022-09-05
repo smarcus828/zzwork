@@ -1,0 +1,24 @@
+$TTL 3H
+$ORIGIN 99.168.192.in-addr.arpa.
+@       IN SOA  forrest.magicalchicken.com. root.magicalchicken.com. (
+                                        0       ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+        NS      @
+        A       127.0.0.1
+
+1       IN PTR  router.magicalchicken.com.
+4       IN PTR  cloudkey.magicalchicken.com.
+15      IN PTR  esxi.magicalchicken.com.
+20      IN PTR  forrest.magicalchicken.com.
+21      IN PTR  ltdan.magicalchicken.com.
+22      IN PTR  jenny.magicalchicken.com.
+23      IN PTR  mama.magicalchicken.com.
+24      IN PTR  bubba.magicalchicken.com.
+25      IN PTR  tex.magicalchicken.com.
+26      IN PTR  dorothy.magicalchicken.com.
+25      IN PTR  tex.magicalchicken.com.
+119     IN PTR  steven-PC3.magicalchicken.com.
+118     IN PTR  marcusdata.magicalchicken.com.

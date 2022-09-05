@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  dns:
+    build: .
+    image: ubuntu/bind9 
+    ports:
+      - "30053:53/udp"
+    volumes:
+      - type: bind
+        source: ./named
+        target: /etc/named
+      - type: bind
+        source: ./etc/named.conf.local
+        target: /etc/bind/named.conf.local
+      - type: bind
+        source: ./etc/named.chicken.zone
+        target: /etc/named.chicken.zone

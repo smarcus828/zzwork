@@ -1,0 +1,12 @@
+zone "magicalchicken.com" IN {
+        type master;
+        file "/etc/named/magicalchicken.zone";
+        allow-update { none; };
+};
+
+zone "99.168.192.in-addr.arpa" IN {
+        type master;
+        file "/etc/named/magicalchicken.rev";
+        allow-update { none; };
+};
+
