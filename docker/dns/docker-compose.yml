@@ -5,7 +5,8 @@ services:
     build: .
     image: ubuntu/bind9 
     ports:
-      - "30053:53/udp"
+      #      - "30053:53/udp"
+      - "53:53/udp"
     volumes:
       - type: bind
         source: ./named
@@ -16,3 +17,6 @@ services:
       - type: bind
         source: ./etc/named.chicken.zone
         target: /etc/named.chicken.zone
+      - type: bind
+        source: ./etc/named.conf.options
+        target: /etc/bind/named.conf.options
