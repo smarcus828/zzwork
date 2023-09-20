@@ -42,11 +42,11 @@ do
 done < ${FILE}
 
 # echo -e "\n\ndisplaying output file"
-# cat ${OUT_FILE}
+cat ${OUT_FILE}
 
-if [ -s ${OUT_FILE} ]; then
+#if [ -s ${OUT_FILE} ]; then
     #echo "mail stuff"
-    mail -s "Service Agreements Expiring" ${MAIL_TO} < ${OUT_FILE}
+#    mail -s "Service Agreements Expiring" ${MAIL_TO} < ${OUT_FILE}
 #else
     #echo "mail nothing"
-fi
+#fi
