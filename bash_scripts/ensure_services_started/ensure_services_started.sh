@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# needs ruby script facter
+
 VERSION=$(facter lsbmajdistrelease)
 SERVICES=(
 "ntpd"
