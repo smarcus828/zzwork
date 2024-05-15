@@ -23,7 +23,7 @@ mv ${HOMEDIR}/.bash_profile ${TMPDIR}
 mv ${HOMEDIR}/.viminfo ${TMPDIR}
 
 cd ${HOMEDIR}/.dotfiles
-stow -t ~ vim zshrc oh-my-zsh bash
+stow -t ~ vim bash
 cd ~
 
 #if grep "smarcus additions" ${HOMESIR}${FILE};
