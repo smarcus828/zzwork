@@ -1,0 +1,9 @@
+screen -ls		// list windows
+screen -S sessionname /dev/ttyUSB1
+screen -X -S 1854 quit	// kill a single window
+screen -r XXX		// reattach
+
+C-a d	// detach
+C-a k	// kill a window - you have to be in it
+C-a :sessionname Fleebnar	// name current session Fleebnar
+
