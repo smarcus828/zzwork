@@ -1,0 +1,4 @@
+24.241.123.184
+port forward
+from 198.85.226.3 to port 28096 - internal 192.168.99.3:28096
+from 198.85.226.3 to port 9922 - internal 192.168.99.20:22
