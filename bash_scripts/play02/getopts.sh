@@ -1,5 +1,6 @@
 #!/bin/bash
 ## working with GETOPTS 
+# set -x
 
 tester=true
 VERBOSE=false
@@ -7,7 +8,13 @@ DEBUG=false
 
 show_msg()
 {
-	echo "This is the usage message"
+	echo "This is the usage message
+	-m  takes an argument
+	-vV verbose
+	-d  debug
+	-?  this message
+	-f  Fleebnar
+	"
 }
 
 echo "Begin"
@@ -25,13 +32,13 @@ done
 
 shift $(( ${OPTIND} -1 ))  # necessary to access arguments without flags
 
-echo "MSG: ${MSG}  and #MSG: ${#MSG}"
-
-(( ${#MSG} < 3 )) && echo "shorter than 3"
-
 (${VERBOSE}) && echo "This is VERBOSE"
+(${VERBOSE}) && set -x
+
+(${DEBUG}) && echo "MSG: ${MSG}  and #MSG: ${#MSG}"
+(${DEBUG}) && (( ${#MSG} < 5 )) && echo "shorter than 5"
 (${DEBUG}) && echo "Debug flag is true"
-echo "Number of arguments: $#"
+(${DEBUG}) && echo "Number of arguments: $#"
 
 
 
@@ -42,4 +49,4 @@ echo "Number of arguments: $#"
 # ( ! $tester ) && echo "AND tester is false"
 # ( $tester ) && echo "3 true" || echo "3 false"
 
-echo "first untagged argument is: ${1}"
+(${DEBUG}) && echo "first untagged argument is: ${1}"
